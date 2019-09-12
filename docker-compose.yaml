@@ -1,10 +1,25 @@
-# used by jenkins to run tests
-version: '3'
+version: '2'
 
 services:
-  mysql:
-    image: mysql:5.7
-    environment:
-      - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=django
-    networks:
+    web:
+        image: lavoweb/php-5.6
+        ports:
+            - "80:80"
+#        volumes:
+#            - ~/www:/var/www/html
+        links:
+            - db:db
+    db:
+        image: mysql:5.5
+        volumes:
+ #           - ~/mysql:/var/lib/mysql
+        ports:
+            - "3306:3306"
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+    myadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - "8080:80"
+        links:
+            - db:db
