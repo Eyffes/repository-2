@@ -33,4 +33,16 @@ node {
             app.push("latest")
         }
     }
+    
+    stage('tests') 
+    {
+        steps 
+        {
+            echo "TEST DE SCRIPT..."
+            /*dir ('tests_dir/scripts') {sh './script-a-executer.sh'}*/
+            sh './script-a-executer.sh'
+        }
+  }
+
+    
 }
