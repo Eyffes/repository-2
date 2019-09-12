@@ -1,6 +1,20 @@
+#!/bin/bash
+# Set variable matching to current user who launch this script
+export HOST_UID_GID=$(id -u):$(id -g)
+
 # JOB_NAME is the name of the project of this build. This is the name you gave your job. It is set up by Jenkins
 COMPOSE_ID=${JOB_NAME:-local}
+
 # Remove Previous Stack
 docker-compose -p $COMPOSE_ID rm -f
+
 # Starting new stack environment
 docker-compose -p $COMPOSE_ID up -d --build
+
+
+
+
+
+# Set variable define custom name related to Project/Server/Branch/Buid_number
+# used by docker to have custom instances and network name
+COMPOSE_ID=${JOB_NAME:-local}
