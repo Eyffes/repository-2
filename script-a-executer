@@ -12,9 +12,4 @@ docker-compose -p $COMPOSE_ID rm -f
 docker-compose -p $COMPOSE_ID up -d --build
 
 
-
-
-
-# Set variable define custom name related to Project/Server/Branch/Buid_number
-# used by docker to have custom instances and network name
-COMPOSE_ID=${JOB_NAME:-local}
+  
