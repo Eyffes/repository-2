@@ -1,0 +1,10 @@
+# used by jenkins to run tests
+version: '3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=django
+    networks:
