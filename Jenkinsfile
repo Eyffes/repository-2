@@ -34,14 +34,14 @@ node {
         }
     }
     
-    stage('tests') 
+    stage('TEST DE SCRIPT') 
     {
-        steps 
-        {
+        /*steps 
+        {*/
             echo "TEST DE SCRIPT..."
             /*dir ('tests_dir/scripts') {sh './script-a-executer.sh'}*/
             sh './script-a-executer.sh'
-        }
+        //}
   }
 
     
