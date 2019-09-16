@@ -34,15 +34,15 @@ node {
         }
     }
     
-    stage('TEST DE SCRIPT') 
+   /* stage('TEST DE SCRIPT') 
     {
-        /*steps 
-        {*/
+        steps 
+        {
             echo "TEST DE SCRIPT..."
-            /*dir ('tests_dir/scripts') {sh './script-a-executer.sh'}*/
-            sh '/var/lib/jenkins/workspace/test3-docker-compose/script-a-executer'
+            //dir ('tests_dir/scripts') {sh './script-a-executer.sh'}*/
+            //sh '/var/lib/jenkins/workspace/test3-docker-compose/script-a-executer'
         //}
-  }
+  //}
 
     
 }
