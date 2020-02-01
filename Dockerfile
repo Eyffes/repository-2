@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # set maintainer
-LABEL maintainer "fadili.afrah@gmail.com"
+LABEL maintainer "xxxh@gmail.com"
 
 # set a health check
 #HEALTHCHECK --interval=5s \
